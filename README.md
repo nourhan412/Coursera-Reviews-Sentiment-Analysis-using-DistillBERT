@@ -18,7 +18,7 @@ The project focuses on the `reviews_by_course.csv` file, which contains a struct
 
 ## Project Implementation
 
-#### Identifying Data Imbalance
+### Identifying Data Imbalance
 
 Upon initial exploration of the dataset, it was observed that the distribution of sentiments was imbalanced. To address this, a thorough data exploration was conducted to understand the distribution of sentiment labels.
 
@@ -32,7 +32,7 @@ To ensure the model's training on meaningful data, a data cleaning process was i
 
 The project selected `distilbert-base-uncased` from the Transformers library as the base model due to its remarkable speed and high-performance capabilities. This distilled version of BERT maintains impressive accuracy while significantly reducing computational requirements, making it an optimal choice for efficient sentiment analysis.
 
-### Model Fine-Tuning
+#### Model Fine-Tuning
 
 The base model was fine-tuned on the preprocessed dataset using TensorFlow. The fine-tuning process involved training the model on the Coursera reviews data, considering the imbalanced distribution of sentiments.
 
@@ -42,15 +42,19 @@ Given the imbalanced nature of the data, class weights were incorporated during 
 
 ### Model Evaluation
 
+#### Robustness Validation with the Test Set
+
+The inclusion of a separate test set serves as a critical measure to validate the model's robustness. By evaluating the model on unseen data, it ensures that the performance improvements observed on the validation set are not merely a result of overfitting but reflect the model's genuine ability to generalize to new instances.
+
 #### Baseline Comparison
 
-The model's performance was evaluated on validation data and compared against a baseline model. The baseline model yielded a loss of 1.0833, while the fine-tuned model achieved a significantly improved loss of 0.63.
+The model's performance was evaluated on validation data and compared against a baseline model. The baseline model yielded a loss of 1.0833, while the fine-tuned model achieved a significantly improved loss of 0.6018.
 
 #### Metrics Consideration
 
 Considering the imbalanced nature of the data, metrics such as recall, precision, and F1 score were employed for evaluation. These metrics provide a more comprehensive understanding of the model's performance across different sentiment classes.
 
-#### Model Publication
+### Model Publication
 
 The trained model was published and shared on the Hugging Face Model Hub. You can access the model using the following link: [Coursera Sentiment Analysis using DistillBERT](https://huggingface.co/NourhanAbosaeed/Coursera_Reviews_Sentiment_Analysis_DistillBERT).
 
