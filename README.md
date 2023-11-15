@@ -48,7 +48,7 @@ The inclusion of a separate test set serves as a critical measure to validate th
 
 #### Baseline Comparison
 
-The model's performance was evaluated on validation data and compared against a baseline model. The baseline model yielded a loss of 1.0833, while the fine-tuned model achieved a significantly improved loss of 0.6018.
+The model's performance was evaluated on validation data and compared against a baseline model. The baseline model yielded a loss of 1.0654, while the fine-tuned model achieved a significantly improved loss of 0.6018.
 
 #### Metrics Consideration
 
